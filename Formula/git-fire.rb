@@ -5,21 +5,21 @@
 class GitFire < Formula
   desc "Emergency git backup - commit and push all repos when disaster strikes"
   homepage "https://github.com/git-fire/git-fire"
-  version "0.2.1"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/git-fire/git-fire/releases/download/v0.2.1/git-fire_0.2.1_darwin_amd64.tar.gz"
-      sha256 "bc7a6d2f66bb810bf84cca12b5d8f0959d5ca2071b24209ecd40661971466d53"
+      url "https://github.com/git-fire/git-fire/releases/download/v0.3.0/git-fire_0.3.0_darwin_amd64.tar.gz"
+      sha256 "8a1030b0ea4974131f0b1270bcab78054d945b256b89a9a595e60e23ac8cc2ac"
 
       define_method(:install) do
         bin.install "git-fire"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/git-fire/git-fire/releases/download/v0.2.1/git-fire_0.2.1_darwin_arm64.tar.gz"
-      sha256 "9380e13e78a4dbdfe8a14b2801dc67566963930646d91ae557ec88db8a998928"
+      url "https://github.com/git-fire/git-fire/releases/download/v0.3.0/git-fire_0.3.0_darwin_arm64.tar.gz"
+      sha256 "4abba2bea91161e72fd7ede15c0fed104c7fbb87b39163b0c6634baa015d7db5"
 
       define_method(:install) do
         bin.install "git-fire"
@@ -29,22 +29,22 @@ class GitFire < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/git-fire/git-fire/releases/download/v0.2.1/git-fire_0.2.1_linux_amd64.tar.gz"
-      sha256 "714acfe67fef2fcb8f6819437d057be91176dd3068fd5e1479b55f33ad8113a1"
+      url "https://github.com/git-fire/git-fire/releases/download/v0.3.0/git-fire_0.3.0_linux_amd64.tar.gz"
+      sha256 "454456d3b991c3a134da3be7f34fd5b60b5cc49da398214851ac752229763e33"
       define_method(:install) do
         bin.install "git-fire"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/git-fire/git-fire/releases/download/v0.2.1/git-fire_0.2.1_linux_armv6.tar.gz"
-      sha256 "bce54ba9c8182116a1d3712fd31781149c7cffd1b9fe060d92d3c5867137e2f8"
+      url "https://github.com/git-fire/git-fire/releases/download/v0.3.0/git-fire_0.3.0_linux_armv6.tar.gz"
+      sha256 "fbbb97b759369b87394566c257de83fc5de93cf080c144822630edd9914449fe"
       define_method(:install) do
         bin.install "git-fire"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/git-fire/git-fire/releases/download/v0.2.1/git-fire_0.2.1_linux_arm64.tar.gz"
-      sha256 "07624c3da64ada56ca0a754ff5099b48ac7a3a903706ca9f83f4001369cd57ea"
+      url "https://github.com/git-fire/git-fire/releases/download/v0.3.0/git-fire_0.3.0_linux_arm64.tar.gz"
+      sha256 "921801b29228450a7f77d259f5d2ef533cc79ed04bbc1729449ade6829ab53e3"
       define_method(:install) do
         bin.install "git-fire"
       end
