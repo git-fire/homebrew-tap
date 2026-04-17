@@ -5,21 +5,21 @@
 class GitRain < Formula
   desc "Sync local git repositories from their remotes — the reverse of git-fire"
   homepage "https://github.com/git-fire/git-rain"
-  version "0.9.1"
+  version "0.9.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/git-fire/git-rain/releases/download/v0.9.1/git-rain_0.9.1_darwin_amd64.tar.gz"
-      sha256 "6bd37961495dfaf23d7a3032b37e8618783322b4082b4a355aeca7dfd4df6066"
+      url "https://github.com/git-fire/git-rain/releases/download/v0.9.2/git-rain_0.9.2_darwin_amd64.tar.gz"
+      sha256 "30cc122b770573bff7d521abf020b21405e6ead6aa418c7b16c641809f8c646d"
 
       define_method(:install) do
         bin.install "git-rain"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/git-fire/git-rain/releases/download/v0.9.1/git-rain_0.9.1_darwin_arm64.tar.gz"
-      sha256 "458c873b142a547763621500de1c1375a1bcc6b977f5aa9ffee822d75455a5a3"
+      url "https://github.com/git-fire/git-rain/releases/download/v0.9.2/git-rain_0.9.2_darwin_arm64.tar.gz"
+      sha256 "9fbb3a796a9d148900b3c0aef813e9195903672786a5bc5acc91311f0e1fbe2d"
 
       define_method(:install) do
         bin.install "git-rain"
@@ -29,22 +29,22 @@ class GitRain < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/git-fire/git-rain/releases/download/v0.9.1/git-rain_0.9.1_linux_amd64.tar.gz"
-      sha256 "5d63799dd0dab7a265108cd7fa9fd94fd4940c4d615eebaa3d0b34335fbfbcfc"
+      url "https://github.com/git-fire/git-rain/releases/download/v0.9.2/git-rain_0.9.2_linux_amd64.tar.gz"
+      sha256 "638442527b8c4b5126f1d5c944718b1a02945dd221318e7973a9d892e39a85c1"
       define_method(:install) do
         bin.install "git-rain"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/git-fire/git-rain/releases/download/v0.9.1/git-rain_0.9.1_linux_armv6.tar.gz"
-      sha256 "66f6b46730843ac8865c000cbd7de29141115709b4b4272b539827a7a0263d50"
+      url "https://github.com/git-fire/git-rain/releases/download/v0.9.2/git-rain_0.9.2_linux_armv6.tar.gz"
+      sha256 "d8c831b77086058ea6321f90423c4fd81fd2280dea259800a87252897432750c"
       define_method(:install) do
         bin.install "git-rain"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/git-fire/git-rain/releases/download/v0.9.1/git-rain_0.9.1_linux_arm64.tar.gz"
-      sha256 "808b1c0ceaa33e521a460761f1caf934736f48f27e22489c625d669a00aaea16"
+      url "https://github.com/git-fire/git-rain/releases/download/v0.9.2/git-rain_0.9.2_linux_arm64.tar.gz"
+      sha256 "611eaeb56d33f5d114e4995c588a545cd04e4fd24625955e626db1a6bcc3ce1f"
       define_method(:install) do
         bin.install "git-rain"
       end
